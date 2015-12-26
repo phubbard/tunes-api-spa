@@ -1,0 +1,73 @@
+<html>
+<head>
+    <!DOCTYPE html>
+<script src="js/jquery-2.1.4.js" lang="javascipt"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/itunes.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAQYqGg4PZD4rD2Q/KwYqGg4AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACkAvAAgwJgkNWD1ZFYta0RWLWtEOWD1ZCTInCQo6KwAAAAABBigYDA5hOyYOYz0mBikaDAAAAAEAAAAAAAAAACCsggAgrIIcIKyC0R2qgP8bpnv+G6Z60BynehwXjWcACTUqCQ5aPloVilrTFIpa0w1VOVoHKyAJCjwqAAAAAAA3xqQAOMWkGzXHpskrzqr0I8CY+Bypfd8ao3cfHah5AB+qeBwfrXzRH7WJ/xypfv4ZnnDQGZtsHBmcbQAAAAAAPcutAEXq0wM1q4YpKIFShxuAUKQdqn/UHrGHHySmcwArl1gbK6ZsxirZr+IixJ3mG6l83Rqjdh8apXgAAAAAAAAAAAApWycAKlwoAiZMFg4bkWIxHrCFxB6yhyAgroEALo9OBC6iZhst5LsdILyTPB2sgMUdrH8gHayAAAAAAAAAAAAAAAAAAAAAAAAesoUAHrKFIR6yhcIesoUhHrKFAAAAAAAAAAAAHa2AAB2tgCEdrYDCHa2AIR2tgAAAAAAAAAAAAAAAAAAAAAAAHrKEAB6yhCEesoTCHrKEIR6yhAAAAAAAAAAAAByrfQAcq30hHKt9whyrfSEcq30AAAAAAAAAAAAAAAAAAAAAAB6zgwAes4MhHrODwh6zgyEes4MAAAAAAAAAAAAbqXoAG6l6IRupesIbqXohG6l6AAAAAAAAAAAAAAAAAAAAAAAesoEAHrKBIR6ygcIesoEhHrKBAAAAAAAAAAAAG6d3ABundyEbp3fCG6d3IRundwAAAAAAAAAAAAAAAAAAAAAAHbB8AB2wfCAdsHvFG6ZzPBmfbB0ZoGwfFY9WHwlcIxoWjl8pGqV0whqldCEapXQAAAAAAAAAAAAAAAAAAAAAAByueAAdr3kfHKx33RmfbOYZn23gGJ9q4BWPWOEMajPNDm47dxmfbcoapHIgGqNxAAAAAAAAAAAAAAAAAAAAAAAnw5MAJ8SVHybAkOAhr33/Had2/xujcv8Ym2v/FZFi/BaSYvAZom/dGqZzHxqkcgAAAAAAAAAAAAAAAAAAAAAAS+XDAEzmxBtK5MHFQNqy4jXVreAqz6XjJMCQ9CK9iP4lu4j/J8KR4CfEkx8nxJMAAAAAAAAAAAAAAAAAAAAAAFXuzwBW7tAEVOzNG0nlwR885cEdK66DLSZ9R5QvtHLXTter4U7ktcRM5rUbTOW1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJUgVACQ9DAMmXSQVMq9pIVjcsiNY670fVu29BFbtvQAAAAAAgf8AAIEDAACBAwAAgQMAAIEDAADBAwAA8eMAAPHjAADx4wAA8eMAAPADAADwAwAA8AMAAPADAADwAwAA/wMAAA==" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="css/itunes.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">iTunes</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#" id="PlayPauseBtn">Play<span class="sr-only">(current)</span></a></li>
+          <li><a href="#" id="prevBtn">Prev</a></li>
+        <li><a href="#" id="nextBtn">Next</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Volume <span class="caret"></span></a>
+          <ul class="dropdown-menu" id="deviceMenu">
+              <li><a href="#" id="setQuiet">Quiet</a></li>
+              <li><a href="#" id="setLoud">Loud</a></li>
+              <li role="separator" class="divider"></li>
+              <li><input type="checkbox" id="testCheckbox" aria-label="test"></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Presets <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              <li><a href="#">PSB in the kitchen</a></li>
+              <li><a href="#">MD upstairs</a></li>
+              <li><a href="#">Random choral downstairs</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Podcasts in kitchen</a></li>
+              <li><a href="#" id="demoKitchen">Demo in kitchen</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Dishes</a></li>
+          </ul>
+        </li>
+      </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search music">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div id="nowPlayingText" class="navbar-text container-fluid" style="margin-left:auto;margin-right:auto;">Loading...</div>
+<p />
+<div class="container-fluid" id="coverArt">
+    <img src="http://thor.phfactor.net:8181/artwork" alt="Current cover art">
+</div>
+</body>
+</html>
+
