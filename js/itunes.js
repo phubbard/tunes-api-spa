@@ -6,7 +6,7 @@ var reloadInfo = function() {
     console.log('Reloading info');
     // Cache buster - see http://stackoverflow.com/questions/2104949/how-to-reload-refresh-an-elementimage-in-jquery
     d = new Date();
-    $('#coverArt').attr('src', 'http://thor.phfactor.net:8181/artwork?' + d.getTime());
+    $('#coverArt').removeAttr('src').attr('src', 'http://thor.phfactor.net:8181/artwork?' + d.getTime());
 
     // jsonp to get player status as json
     // Note - had to modify the itunes-api code on thor using the cors plugin for this to work
@@ -82,7 +82,8 @@ var setPlaylist = function(pl_name) {
                 setSinglePlaylist(item['id']);
                 return;
             }
-        })
+        });
+        console.error('Playlist ' + pl_name + ' not found!');
     });
 };
 
@@ -142,6 +143,16 @@ var presetDemo = function() {
     playFn();
 };
 
+var presetGarage = function() {
+
+    console.log('Garage');
+    stopBfn();
+    setPlaylist('Basic rock');
+    setLoud();
+    setSpeakers(['Garage']);
+    playFn();
+};
+
 // Populate the menu dropdown with names of airplay devices. Incomplete.
 // FIXME - need to reload this now and then, so need ability to rewrite and not just append
 var fillDeviceMenu = function() {
@@ -180,4 +191,5 @@ $(window).load(function() {
     $('#nextBtn').click(nextFn);
 
     $('#demoKitchen').click(presetDemo);
+    $('#presetGarage').click(presetGarage);
 });
