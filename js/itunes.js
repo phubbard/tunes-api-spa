@@ -130,7 +130,7 @@ var setQuiet = function() {
 };
 
 var setLoud = function() {
-    setVolume(50);
+    setVolume(55);
 };
 
 var presetDemo = function() {
@@ -152,6 +152,18 @@ var presetGarage = function() {
     setSpeakers(['Garage']);
     playFn();
 };
+
+var presetRandomChoral = function() {
+    console.log('Choral preset');
+    stopBfn();
+    var plists = ['B Minor mass', 'Bach: St. Matthew Passion', 'Berlioz - Requiem', 'Magnificat', 'Messiah'];
+    var pl = plists[Math.floor(Math.random()*plists.length)];
+    setPlaylist(pl);
+    setSpeakers(['Kitchen']);
+    setTimeout(playFn, 2000);
+//    playFn();
+};
+
 
 // Populate the menu dropdown with names of airplay devices. Incomplete.
 // FIXME - need to reload this now and then, so need ability to rewrite and not just append
@@ -192,4 +204,5 @@ $(window).load(function() {
 
     $('#demoKitchen').click(presetDemo);
     $('#presetGarage').click(presetGarage);
+    $('#presetChoral').click(presetRandomChoral);
 });
